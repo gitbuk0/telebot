@@ -11,7 +11,5 @@ RUN apt -y update && \
 RUN pip install python-telegram-bot && pip install imaplib2
 
 RUN mkdir -p /opt/telebot
-#RUN chown root:users -R /opt/telebot && chmod 775 -R /telebot
 
-#COPY ./telebot/ /opt/telebot
 RUN chown root:users -R /opt/telebot && chmod 775 -R /opt/telebot
