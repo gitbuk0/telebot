@@ -1,0 +1,9 @@
+version: "2.4"
+services:
+  telebot:
+    image: buk0/telebot:bionic
+    container_name: telebot_buka
+    volumes:
+      - /opt/telebot:/opt/telebot
+    command: "python3 /opt/telebot/mailToTelegramForwarder.py -c /opt/telebot/mailToTelegramForwarder.conf"
+    restart: always
